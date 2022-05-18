@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question2</title>
+</head>
+
+<body>
+    <h3>An arrow function takes two arguments firstName and lastName and returns a 2 letter string that represents the
+        first letter of both the arguments.</h3>
+    <p id="name"></p>
+
+    <script>
+        let fun = (firstName, lastName) => firstName.charAt(0) + lastName.charAt(0);
+        
+        setTimeout(() => {
+            let name = prompt("Enter your name"); let indexOfSpace = name.indexOf(' ');
+            let firstName = name.slice(0, indexOfSpace);
+            let lastName = name.slice(indexOfSpace + 1, name.length - 1);
+            document.getElementById('name').innerHTML=fun(firstName,lastName);
+        }, 5000);
+
+    </script>
+</body>
+
+</html>

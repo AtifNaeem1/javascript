@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question1</title>
+</head>
+<body>
+    <h1>Program to demonstrate how a function can be passed as a parameter to another function </h1>
+    <button id="btn" onclick="greet(greetMsg)">Click here</button>
+
+    <script>
+        function greetMsg()
+        {
+            return "Good Morning";
+        }
+        function greet(fun)
+        {
+            alert(fun());
+        }
+    </script>
+</body>
+</html>
