@@ -15,25 +15,33 @@
         <h4 id="email"></h4>
     </div>
     <script>
-        function getData(uId,callback) {
-            setTimeout(() => {
-                console.log("Fetched the data!");
-                let email = "skc@gmail.com";
-                callback(email);
-            }, 4000);
+
+        function getData(uId) {
+           return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    console.log("Fetched the data!");
+                    let email = "skc@gmail.com";
+                    let error = false;
+                    if(!error)
+                    {
+                        resolve(email);
+                    }
+                    else
+                    {
+                        reject(new Error("Some error occured"));
+                    }
+                }, 4000);
+            })
+
         }
 
-       
-        function display(email) {
-            document.getElementById("email").innerHTML = email;
-            console.log("Email id of the user id is: " + email);
-            console.log("end");
-        } 
-        
-        
         console.log("start");
-        getData("skc",display);
-
+        getData("skc").then((email)=>{
+            console.log("Email id of the user id is: " + email);
+            document.getElementById("email").innerHTML=email;
+        }).catch((error)=>console.log(error)).finally(()=>console.log("end"));
+        
+        
     </script>
 </body>
 
