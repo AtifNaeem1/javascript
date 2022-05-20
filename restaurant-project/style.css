@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+header {
+    color: grey;
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+body {
+    background-color: rgb(253, 244, 233)
+}
+
+.searchbox {
+    border-radius: 3px;
+    width: 70%;
+
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: 1px solid black;
+}
+
+.tablesearch {
+    border-radius: 3px;
+    margin-left: 30px;
+    width: 70%;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    border: 1px solid black;
+}
+
+h4,
+h2 {
+    font-size: large;
+    text-align: center;
+}
+
+.table-content {
+    border-collapse: collapse;
+    font-size: 1em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table-content thead tr {
+    background-color: rgb(184, 107, 107);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.table-content th,
+.table-content td {
+    padding: 10px 12px;
+}
+
+.table-content tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-content tbody:nth-of-type(even) {
+    background-color: #e9e9e9;
+}
+
+.table-content tbody:last-of-type {
+    border-bottom: 2px solid rgb(184, 107, 107);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+
+    padding: 10px;
+}
+
+.item {
+    border-radius: 5px;
+    margin: 30px 30px 30px 10px;
+    padding: 20px 30px;
+    height: 80px;
+    min-width: 50%;
+    cursor: move;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.button1 {
+    background-color: grey;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button2 {
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.tableitem {
+    border-radius: 5px;
+    margin: 10px 30px 30px 10px;
+    padding: 20px 30px;
+    height: auto;
+    width: auto;
+    cursor: pointer;
+    box-shadow: 3px 8px 5px #888888;
+}
