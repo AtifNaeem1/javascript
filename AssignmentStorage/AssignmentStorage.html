@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h3>Click on the button to increment count</h3>
+    <button id="btnLocal" onclick="incrementCountLocal()">Click to increment LocalCount</button>
+    <p id="msgLocal"></p>
+
+    <br>
+
+    <button id="btnSession" onclick="incrementCountSession()">Click to increment sessionCount</button>
+    <p id="msgSession"></p>
+
+
+
+    <script>
+        
+
+        function incrementCountSession()
+        {
+            if(typeof(Storage) != undefined)
+            {
+                if(sessionStorage.clickCount)
+                {
+                    sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
+                }
+                else{
+                    sessionStorage.clickCount = 1;
+                }
+                document.getElementById("msgSession").innerHTML = `Total Session click count : ${sessionStorage.clickCount}`;
+            }
+            else{
+                document.getElementById("msgSession").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+
+
+        function incrementCountLocal() {
+            if (typeof (Storage) != undefined) {
+                if (localStorage.clickCount) {
+                    localStorage.clickCount = Number(localStorage.clickCount) + 1;
+                }
+                else {
+                    localStorage.clickCount = 1;
+                }
+                document.getElementById("msgLocal").innerHTML = `Total Local click count : ${localStorage.clickCount}`;
+            }
+            else {
+                document.getElementById("msgLocal").innerHTML = "Sorry, your browser does not support web storage...";
+            }
+        }
+    </script>
+</body>
+</html>
